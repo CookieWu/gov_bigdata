@@ -9,13 +9,13 @@ default: &default
   encoding: SQL_ASCII
   pool: 5
   timeout: 5000
+  host: localhost
+  user: john
+  password: 771115
 
 development:
   <<: *default
   database: gov_development
-  host: localhost
-  user: john
-  password: 771115
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
