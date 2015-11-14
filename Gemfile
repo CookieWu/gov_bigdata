@@ -36,7 +36,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #---add
 # font-awesome-icon
-gem "font-awesome-rails"
+gem "font-awesome-rails", '~> 4.4.0'
+
+gem 'rspec-rails', '~> 3.3.0'
+
+gem 'paperclip', '~> 4.3.1'
+
+gem "rails-i18n", '~> 4.0.6'
+
+gem 'kaminari', '~> 0.16.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

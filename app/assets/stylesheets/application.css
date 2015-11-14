@@ -15,3 +15,32 @@
  *= require bootstrap.min
  *= require font-awesome
  */
+
+body {
+	text-align: center;
+}
+
+.outline {
+  padding-top:10px;
+  // padding-bottom:10px;
+  border-top: 1px solid darkgray;
+  font-size:85%
+}
+
+.table th {
+    font-family: Georgia;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+
+    background: #000; 
+  }
+  
+.table td {
+    font-family: Georgia;
+    font-size: 15px;
+    /*text-align: center;*/
+    /*color: white;*/
+    /*background: #000; */
+  }
+

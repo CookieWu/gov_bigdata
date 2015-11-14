@@ -1,0 +1,58 @@
+<!--<h1>動物清單</h1>-->
+
+<!--<div class="table-responsive col-md-12 col-sm-12">-->
+<!--  <table class="table table-striped">-->
+<!--    <thead>-->
+<!--      <tr>-->
+<!--        <th>ID</th>-->
+<!--        <th>name</th>-->
+<!--        <th>大頭照</th>-->
+<!--      </tr>-->
+<!--    </thead>-->
+  
+<!--    <tbody>-->
+    <div class="row login_box">
+      <% @animals_page.each do |animal| %>
+    
+	    <div class="col-md-3 col-xs-3" align="center">
+            <div class="outter"><%= image_tag(animal['ImageName'], style: 'height:250px;width:300px' )%></div>   
+            <!--<span><%= animal['_id'].present? ? animal['_id'] : '無' %></span>-->
+                <span>名稱：<%= animal['Name'].present? ? animal['Name'] : '無' %></span>
+                <% if animal['Sex'].present? && animal['Sex'].to_s == "雄" %>
+                    <span>性別：<i class="fa fa-venus"></i></span><br>
+                <% else %>
+                    <span>性別：<i class="fa fa-mars"></i></span><br>
+                <% end %>
+                <span>品種：<%= animal['Variety'].present? ? animal['Variety'] : '無' %></span>
+                <span>年齡：<%= animal['Age'].present? ? animal['Age'] : '無' %></span>
+                <span>絕育：<%= animal['IsSterilization'].present? ? animal['IsSterilization'] : '無' %></span><br>
+                <span style="display:inline-block;white-space: nowrap;">備註：<%= animal['Note'].present? ? animal['Note'] : '無' %></span>
+            <div class="outline col-md-12 col-sm-12 "></div>
+            <div class="col-md-12 col-xs-12" align="center">
+                <span>
+                組織：<span style="display:inline-block;white-space: nowrap;"><%= animal['Resettlement'].present? ? animal['Resettlement'] : '無' %></span><br> 
+                聯絡：<span><%= animal['Phone'].present? ? animal['Phone'] : '無' %></span><br> 
+                信箱：<span><%= animal['Email'].present? ? animal['Email'] : '無' %></span>
+            </div>
+            <div class="outline col-md-12 col-sm-12 "></div>
+	    </div>
+        <!--<div class="col-md-6 col-xs-6 follow line" align="center">-->
+        <!--    <h3>-->
+        <!--         編號 <br/> <span><%= animal['_id'] %></span>-->
+        <!--    </h3>-->
+        <!--</div>-->
+        <!--<div class="col-md-6 col-xs-6 follow line" align="center">-->
+        <!--    <h3>-->
+        <!--         名稱 <br/> <span><%= animal['Name'] %></span>-->
+        <!--    </h3>-->
+        <!--</div>-->
+        <% end %>
+        <%= paginate @animals_page if @animals_page.present? %>
+    </div>
+     
+      
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->
+
+<br>

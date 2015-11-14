@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   
-  root 'logs#index'
+  root 'animals#index'
+  
+  get 'animals' => 'animals#index'
   
   resources :logs
+  resources :table_games
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

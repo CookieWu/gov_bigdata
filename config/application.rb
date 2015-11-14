@@ -23,7 +23,14 @@ module Workspace
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     
-    #---add
+    # ---add
+    # 切換語系為繁體中文
+    config.i18n.default_locale = "zh-TW" 
+    
+    config.time_zone = "Taipei"
+    config.active_record.default_timezone = :local
+
+    config.autoload_paths += Dir["#{config.root}/lib", "#{config.root}/lib/**/"]
 
   end
 end

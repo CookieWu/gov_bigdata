@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @table_game.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @table_game.description %>
+</p>
+
+<p>
+  <strong>Suitable persons:</strong>
+  <%= @table_game.suitable_persons %>
+</p>
+
+<p>
+  <strong>Price min:</strong>
+  <%= @table_game.price_min %>
+</p>
+
+<p>
+  <strong>Price max:</strong>
+  <%= @table_game.price_max %>
+</p>
+
+<p>
+  <strong>Recommendation:</strong>
+  <%= @table_game.recommendation %>
+</p>
+
+<%= link_to 'Edit', edit_table_game_path(@table_game) %> |
+<%= link_to 'Back', table_games_path %>

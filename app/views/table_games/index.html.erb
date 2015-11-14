@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>遊戲清單</h1>
+
+<div class="table-responsive col-md-12 col-sm-12">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>名稱</th>
+        <th>敘述</th>
+        <th>適合人數</th>
+        <!--<th>Price min</th>-->
+        <!--<th>Price max</th>-->
+        <th>推薦</th>
+        <th style="width:20%"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @table_games.each do |table_game| %>
+        <tr>
+          <td><%= table_game.name %></td>
+          <td><%= table_game.description %></td>
+          <td><%= table_game.suitable_persons %></td>
+          <!--<td><%= table_game.price_min %></td>-->
+          <!--<td><%= table_game.price_max %></td>-->
+          <td><%= table_game.recommendation %></td>
+          <td>
+            <%= link_to '詳細資料', table_game, class: 'btn btn-default' %>
+            <%= link_to '編輯', edit_table_game_path(table_game), class: 'btn btn-default' %>
+            <%= link_to '刪除', table_game, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+
+<%= link_to new_table_game_path, class: 'btn btn-default' do %>
+  新增遊戲 <i class="fa fa-plus"></i>
+<% end %>
