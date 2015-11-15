@@ -15,7 +15,9 @@
       <% @animals_page.each do |animal| %>
     
 	    <div class="col-md-3 col-xs-3" align="center">
-            <div class="outter"><%= image_tag(animal['ImageName'], style: 'height:250px;width:300px' )%></div>   
+            <div class="outter">
+                <%= image_tag(animal['ImageName'], style: 'height:250px;width:300px' )%>
+            </div>   
             <!--<span><%= animal['_id'].present? ? animal['_id'] : '無' %></span>-->
                 <span>名稱：<%= animal['Name'].present? ? animal['Name'] : '無' %></span>
                 <% if animal['Sex'].present? && animal['Sex'].to_s == "雄" %>

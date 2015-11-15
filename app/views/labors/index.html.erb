@@ -1,0 +1,28 @@
+<div class="table-responsive col-md-12 col-sm-12">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>事業單位名稱/自然人姓名</th>
+        <th>違反勞動基準法條款</th>
+        <th>違反法規內容</th>
+        <th>單位代表人</th>
+        <th>處分日期</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @labors_data.each do |labor| %>
+        <tr>
+          <td><%= labor["事業單位名稱/自然人姓名"].present? ? labor["事業單位名稱/自然人姓名"] : '無' %></td>
+          <td><%= labor['違反勞動基準法條款'].present? ? labor['違反勞動基準法條款'] : '無' %></td>
+          <td><%= labor['違反法規內容'].present? ? labor['違反法規內容'] : '無' %></td>
+          <td><%= labor['事業單位代表人'].present? ? labor['事業單位代表人'] : '無' %></td>
+          <td><%= labor['處分日期'].present? ? labor['處分日期'] : '無' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @labors_data if @labors_data.present? %>
+</div>
+
+<br>

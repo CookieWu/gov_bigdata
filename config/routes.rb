@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   
   get 'animals' => 'animals#index'
   
+  get 'labors' => 'labors#index'
+  
   resources :logs
   resources :table_games
   
